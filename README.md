@@ -1,6 +1,6 @@
 # Capistrano::Jspm
 
-Jspm for support for Capistrano 3.x
+Jspm support for Capistrano 3.x
 
 ## Installation
 
