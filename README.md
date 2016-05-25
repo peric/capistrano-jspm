@@ -7,8 +7,8 @@ Jspm support for Capistrano 3.x
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'capistrano-jspm'
 gem 'capistrano'
+gem 'capistrano-jspm'
 ```
 
 And then execute:
