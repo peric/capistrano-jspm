@@ -1,4 +1,4 @@
-# Capistrano::Jspm
+# Capistrano::Jspm[![Gem Version](https://badge.fury.io/rb/capistrano-jspm.svg)](https://badge.fury.io/rb/capistrano-jspm)
 
 Jspm support for Capistrano 3.x
 
