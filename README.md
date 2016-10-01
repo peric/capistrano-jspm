@@ -54,3 +54,13 @@ Configurable options, shown here with defaults:
 ```ruby
 set :jspm_build_flags, '--minify'
 ```
+
+## Versions
+
+### v1
+
+Supports `bundle_sfx` task.
+
+### v2
+
+`bundle_sfx` task is renamed to `build` task.
