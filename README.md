@@ -37,13 +37,13 @@ set :jspm_roles, :web
 set :jspm_bin, :jspm
 ```
 
-### jspm:bundle_sfx
+### jspm:build
 
-`bundle_sfx` task is optional, and in order to run it on every deployment, add this to your `deploy.rb` file:
+`build` task is optional, and in order to run it on every deployment, add this to your `deploy.rb` file:
 
 ```ruby
-before 'deploy:updated', 'jspm:bundle_sfx' do
-  invoke 'jspm:bundle_sfx',
+before 'deploy:updated', 'jspm:build' do
+  invoke 'jspm:build',
          'path/for/fromfile/app.js',
          'path/for/tofile/app.min.js'
 end
@@ -52,5 +52,5 @@ end
 Configurable options, shown here with defaults:
 
 ```ruby
-set :jspm_sfx_flags, '--minify'
+set :jspm_build_flags, '--minify'
 ```
