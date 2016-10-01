@@ -23,17 +23,17 @@ namespace :jspm do
         This task is completely optional and if you want to run it on every deployment \
         before deploy:updated, add this to your deploy.rb.
 
-          before 'deploy:updated', 'jspm:bundle_sfx' do
-            invoke 'jspm:bundle_sfx',
+          before 'deploy:updated', 'jspm:build' do
+            invoke 'jspm:build',
                    'path/for/fromfile/app.js',
                    'path/for/tofile/app.min.js'
           end
 
         You can override any of these defaults by setting the variables shown below.
 
-          set :jspm_sfx_flags, '--minify'
+          set :jspm_build_flags, '--minify'
   DESC
-  task :bundle_sfx, [:from_file, :to_file] do |task, args|
+  task :build, [:from_file, :to_file] do |task, args|
     on roles fetch(:jspm_roles) do
       within "#{release_path}" do
         unless args[:from_file]
@@ -44,8 +44,8 @@ namespace :jspm do
         end
 
         execute fetch(:jspm_bin),
-                'bundle-sfx',
-                fetch(:jspm_sfx_flags),
+                'build',
+                fetch(:jspm_build_flags),
                 args[:from_file],
                 args[:to_file]
       end
@@ -57,6 +57,6 @@ namespace :load do
   task :defaults do
     set :jspm_roles, :web
     set :jspm_bin, :jspm
-    set :jspm_sfx_flags, '--minify'
+    set :jspm_build_flags, '--minify'
   end
 end
