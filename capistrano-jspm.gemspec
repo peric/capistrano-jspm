@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'capistrano-jspm'
-  spec.version       = '1.0.0'
+  spec.version       = '2.0.0'
   spec.authors       = ['Dražen Perić']
   spec.email         = ['peric.drazhen@gmail.com']
   spec.description   = %q{jspm support for Capistrano 3.x}
