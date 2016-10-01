@@ -1,6 +1,6 @@
 namespace :jspm do
   desc <<-DESC
-        Install the current jspm environment. Command is executed withouth any other arguments.y\
+        Install the current jspm environment. Command is executed without any other arguments.\
 
         You can override any of these defaults by setting the variables shown below.
 
